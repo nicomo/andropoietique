@@ -5,8 +5,12 @@ package com.nicolasmorin.andropoetique;
  */
 
 import android.app.Fragment;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -55,6 +59,35 @@ public class StatueFragment extends Fragment {
         // bind the adapter we just created to the listview that should display it
         ListView listView = (ListView) rootView.findViewById(R.id.listview_statue);
         listView.setAdapter(mStatueAdapter);
+
+        // setting up sound to be played later on Gesture Detection
+        final MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), R.raw.whispering);
+
+
+
+
+
+
+        // Gesture detector setup
+        final GestureDetector gesture = new GestureDetector(getActivity(), new GestureDetector.SimpleOnGestureListener() {
+
+            @Override
+            public boolean onDown(MotionEvent e) {
+                Log.v(TAG, "onDown called");
+                // play sound
+                mediaPlayer.start();
+                return true;
+            }
+
+        });
+
+        // gesture detection, firing
+        listView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View listView, MotionEvent event) {
+                return gesture.onTouchEvent(event);
+            }
+        });
 
         return rootView;
     }
