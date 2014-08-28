@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Andropoïétique</string>
+    <string name="app_intro">Un livre d\'artiste sur Android</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_statue">Statue</string>
     <string name="placeholder_statue">Statue inner text</string>
@@ -9,11 +10,19 @@
     <string-array name="titles_array">
         <item>Statue</item>
         <item>Cheval-guerre</item>
+        <item>Tout est chair en mon propre centre</item>
     </string-array>
 
     <string name="hello_world">Hello World!</string>
+    <string name="author">Nicolas Morin</string>
     <string name="title_activity_cheval_guerre">ChevalGuerreActivity</string>
     <string name="placeholder_cheval_guerre">Cheval guerre placeholder</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chair_centre_title">Tout est chair en mon propre centre</string>
+    <string name="chair_centre_alarmtxt">Ce poème vous sera livré dans les prochaines 24 heures. Par surprise.</string>
+    <string name="chair_centre_p1">J\'ai rêvé que j\'étais de leur peuple et le suis : on appelle bien sauvage un blé domestiqué, et la machoîre animée d\'un lapin sans vie, comme une ville, peut bien filtrer la neige, et sa couleur : on meurt toujours sans imagination.</string>
+    <string name="chair_centre_p2">Ce rêve populiste n\'est pas d\'alliage mais de métal pur : une chimie du mensonge où je crois. Cela n\'a d\'ailleurs aucune importance; il n\'y a pas d\'image : les lamelles de bois, la Finlande, inscrite par ses plus humbles serviteurs, etcetera, le champ des Maures et celui de Saint-George, une longue liste de notes aussi personnelles que le concert, dans le jardin, des feuilles qui exécutent « Denn alles Fleisch, es ist wie Grass ».</string>
+    <string name="chair_centre_p3">Le peuple des ossements, dont je suis moi aussi quand je vide mes poches, quand d\'un coup de poing on sort une bibliothèque de mon estomac, est un peuple en armes. La guerre fait rage sur mon champ de vision et mon œil, comme un Général, ne perçoit que les soldats, qui coulent de ses doigts dans le lac du monde. C\'est un empire qui n\'a pas de frontière : je marche perdu en mon propre centre.</string>
+    <string name="title_activity_chair_centre">Tout est chair...</string>
 
 </resources>
