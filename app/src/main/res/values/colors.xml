@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="blue_1" type="color">#4bcfe6</item>
+    <item name="blue_2" type="color">#42b5d0</item>
+    <item name="blue_3" type="color">#009fd9</item>
+    <item name="blue_4" type="color">#017bae</item>
+    <item name="pink_1" type="color">#f2a9bc</item>
+    <item name="pink_2" type="color">#f1838c</item>
+    <item name="pink_3" type="color">#e0688b</item>
+    <item name="pink_4" type="color">#cc4a78</item>
+
+
+</resources>

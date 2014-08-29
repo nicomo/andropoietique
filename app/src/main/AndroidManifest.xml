@@ -9,11 +9,10 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-
         <activity
             android:name=".HomeActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +23,7 @@
             android:name=".StatueActivity"
             android:label="@string/title_activity_statue"
             android:parentActivityName=".HomeActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
@@ -33,7 +32,7 @@
             android:name=".ChevalGuerreActivity"
             android:label="@string/title_activity_cheval_guerre"
             android:parentActivityName=".HomeActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
@@ -42,7 +41,7 @@
             android:name=".ChairCentreAlarm"
             android:label="@string/chair_centre_alarmtxt"
             android:parentActivityName=".HomeActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
@@ -56,12 +55,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
         </activity>
+        <activity
+            android:name=".GuideVoyageActivity"
+            android:label="@string/title_activity_guide_voyage"
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicolasmorin.andropoetique.HomeActivity" />
+        </activity>
 
         <receiver android:name=".ChairCentreNotificationReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
 
     </application>
 

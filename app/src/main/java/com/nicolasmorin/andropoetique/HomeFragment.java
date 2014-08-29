@@ -73,10 +73,9 @@ public class HomeFragment extends Fragment {
                     intent.setClass(getActivity(), StatueActivity.class);
                     break;
                 case 1:
-                    intent.setClass(getActivity(), ChevalGuerreActivity.class);
+                    intent.setClass(getActivity(), GuideVoyageActivity.class);
                     break;
                 case 2:
-                    // TODO test
                     // special case : for poem 2 we point to an activity if 1st time
                     // and another otherwise
                     // get preferences

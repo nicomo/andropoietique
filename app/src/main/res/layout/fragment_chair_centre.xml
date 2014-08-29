@@ -17,25 +17,23 @@
             android:text="@string/chair_centre_title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            style="@style/AppTheme.TitleFont"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            style="@style/AppTheme.TitleFont" />
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/chair_centre_p1"
-            style="@style/AppTheme.Para"/>
+            style="@style/AppTheme.Para.Last"/>
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/chair_centre_p2"
-            style="@style/AppTheme.Para"
+            style="@style/AppTheme.Para.Last"
             android:typeface="serif" />
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/chair_centre_p3"
-            style="@style/AppTheme.Para" />
+            style="@style/AppTheme.Para.Last" />
 
     </LinearLayout>
 
