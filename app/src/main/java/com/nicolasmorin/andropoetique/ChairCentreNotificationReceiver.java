@@ -5,6 +5,8 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 /**
@@ -27,29 +29,47 @@ public class ChairCentreNotificationReceiver extends BroadcastReceiver {
     private final CharSequence contentTitle = "Tout est chair en mon propre centre";
     private final CharSequence contentText = "J'ai rêvé que j'étais de leur peuple...";
 
+    // get sharedpref ChairCentreNotif
+    private SharedPreferences prefs;
+    private Boolean chairCentreNotif;
+
+
+
     @Override
     public void onReceive(Context context, Intent intent) {
 
         Log.v(TAG, "MyBroadcastReceiver loaded from activity");
 
-        // create intent
-        mNotificationIntent = new Intent(context, ChairCentreActivity.class);
-        // wrap intent in a pending intent
-        mContentIntent = PendingIntent.getActivity(context, 0,
-                mNotificationIntent, PendingIntent.FLAG_ONE_SHOT);
+        prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        chairCentreNotif = prefs.getBoolean("chairCentreNotif", true);
 
-        // Build the notification
-        android.app.Notification.Builder notificationBuilder = new android.app.Notification.Builder(
-                context).setTicker(tickerText)
-                .setSmallIcon(R.drawable.ic_launcher)
-                .setAutoCancel(true).setContentTitle(contentTitle)
-                .setContentText(contentText).setContentIntent(mContentIntent);
+        if (chairCentreNotif) {
 
-        // Pass the Notification to the NotificationManager and notify
-        NotificationManager mNotificationManager = (NotificationManager) context
-                .getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.notify(MY_NOTIFICATION_ID,
-                notificationBuilder.build());
+            // create intent
+            mNotificationIntent = new Intent(context, ChairCentreActivity.class);
+            // wrap intent in a pending intent
+            mContentIntent = PendingIntent.getActivity(context, 0,
+                    mNotificationIntent, PendingIntent.FLAG_ONE_SHOT);
 
+            // Build the notification
+            android.app.Notification.Builder notificationBuilder = new android.app.Notification.Builder(
+                    context).setTicker(tickerText)
+                    .setSmallIcon(R.drawable.ic_launcher)
+                    .setAutoCancel(true).setContentTitle(contentTitle)
+                    .setContentText(contentText).setContentIntent(mContentIntent);
+
+            // Pass the Notification to the NotificationManager and notify
+            NotificationManager mNotificationManager = (NotificationManager) context
+                    .getSystemService(Context.NOTIFICATION_SERVICE);
+            mNotificationManager.notify(MY_NOTIFICATION_ID,
+                    notificationBuilder.build());
+
+            // set sharedpref ChairCentre to false;
+            chairCentreNotif = false;
+            SharedPreferences.Editor editorPref = prefs.edit();
+            editorPref.putBoolean("chairCentreNotif", chairCentreNotif);
+            editorPref.commit();
+
+        }
     }
 }
