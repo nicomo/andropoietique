@@ -96,12 +96,24 @@ public class GuideVoyageActivity extends Activity {
                         verse1.startAnimation(in);
                         verse1.setVisibility(View.VISIBLE);
                         verse1.setBackgroundColor(getResources().getColor(R.color.blue_1));
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                gvScrollView.smoothScrollTo(0, title.getTop());
+                            }
+                        });
                     } else if (verse2.getVisibility() == View.INVISIBLE) {
                         myLayout.setBackgroundColor(getResources().getColor(R.color.blue_2));
                         verse1.setBackgroundColor(getResources().getColor(R.color.pink_2));
                         verse2.startAnimation(in);
                         verse2.setVisibility(View.VISIBLE);
                         verse2.setBackgroundColor(getResources().getColor(R.color.pink_1));
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                gvScrollView.smoothScrollTo(0, title.getBottom());
+                            }
+                        });
                     } else if (verse3.getVisibility() == View.INVISIBLE) {
                         myLayout.setBackgroundColor(getResources().getColor(R.color.blue_3));
                         verse1.setBackgroundColor(getResources().getColor(R.color.blue_1));
