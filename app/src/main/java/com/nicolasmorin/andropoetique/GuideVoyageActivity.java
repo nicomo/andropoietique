@@ -3,6 +3,7 @@ package com.nicolasmorin.andropoetique;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 /*
@@ -66,6 +68,7 @@ public class GuideVoyageActivity extends Activity {
                 Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.fragment_guide_voyage, container, false);
 
+            final ScrollView gvScrollView = (ScrollView) rootView.findViewById(R.id.guide_voyage_scrollview);
             final View myLayout = rootView.findViewById(R.id.guide_voyage_linearlayout);
             final TextView title = (TextView) rootView.findViewById(R.id.guide_voyage_title);
             final TextView verse1 = (TextView) rootView.findViewById(R.id.guide_voyage_1);
@@ -77,9 +80,6 @@ public class GuideVoyageActivity extends Activity {
             final TextView verse7 = (TextView) rootView.findViewById(R.id.guide_voyage_7);
             final TextView verse8 = (TextView) rootView.findViewById(R.id.guide_voyage_8);
 
-
-
-            // TODO detect onDown
             // Gesture detector setup
             final GestureDetector gesture = new GestureDetector(getActivity(), new GestureDetector.SimpleOnGestureListener() {
 
@@ -109,6 +109,12 @@ public class GuideVoyageActivity extends Activity {
                         verse3.startAnimation(in);
                         verse3.setVisibility(View.VISIBLE);
                         verse3.setBackgroundColor(getResources().getColor(R.color.pink_4));
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                gvScrollView.smoothScrollTo(0, verse1.getTop());
+                            }
+                        });
                     } else if (verse4.getVisibility() == View.INVISIBLE) {
                         verse1.setBackgroundColor(getResources().getColor(R.color.pink_4));
                         verse2.setBackgroundColor(getResources().getColor(R.color.blue_3));
@@ -116,6 +122,12 @@ public class GuideVoyageActivity extends Activity {
                         verse4.startAnimation(in);
                         verse4.setVisibility(View.VISIBLE);
                         verse4.setBackgroundColor(getResources().getColor(R.color.blue_1));
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                gvScrollView.smoothScrollTo(0, verse2.getTop());
+                            }
+                        });
                     } else if (verse5.getVisibility() == View.INVISIBLE) {
                         myLayout.setBackgroundColor(getResources().getColor(R.color.blue_1));
                         verse1.setBackgroundColor(getResources().getColor(R.color.blue_2));
@@ -123,6 +135,12 @@ public class GuideVoyageActivity extends Activity {
                         verse5.startAnimation(in);
                         verse5.setVisibility(View.VISIBLE);
                         verse5.setBackgroundColor(getResources().getColor(R.color.blue_2));
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                gvScrollView.smoothScrollTo(0, verse3.getTop());
+                            }
+                        });
                     } else if (verse6.getVisibility() == View.INVISIBLE) {
                         myLayout.setBackgroundColor(getResources().getColor(R.color.pink_1));
                         verse1.setBackgroundColor(getResources().getColor(R.color.blue_2));
@@ -133,6 +151,12 @@ public class GuideVoyageActivity extends Activity {
                         verse6.startAnimation(in);
                         verse6.setVisibility(View.VISIBLE);
                         verse6.setBackgroundColor(getResources().getColor(R.color.pink_2));
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                gvScrollView.smoothScrollTo(0, verse4.getTop());
+                            }
+                        });
                     } else if (verse7.getVisibility() == View.INVISIBLE) {
                         myLayout.setBackgroundColor(getResources().getColor(R.color.pink_4));
                         verse3.setBackgroundColor(getResources().getColor(R.color.blue_4));
@@ -142,6 +166,12 @@ public class GuideVoyageActivity extends Activity {
                         verse7.startAnimation(in);
                         verse7.setVisibility(View.VISIBLE);
                         verse7.setBackgroundColor(getResources().getColor(R.color.pink_2));
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                gvScrollView.smoothScrollTo(0, verse5.getTop());
+                            }
+                        });
                     } else if (verse8.getVisibility() == View.INVISIBLE) {
                         myLayout.setBackgroundColor(getResources().getColor(R.color.blue_4));
                         verse1.setBackgroundColor(getResources().getColor(R.color.blue_2));
@@ -173,17 +203,9 @@ public class GuideVoyageActivity extends Activity {
                         verse7.setVisibility(View.INVISIBLE);
                         verse8.startAnimation(out);
                         verse8.setVisibility(View.INVISIBLE);
+                        // back up
+                        gvScrollView.smoothScrollTo(0,0);
                     }
-
-
-                    // TODO on 1st onDown, set title to textColor white
-                    // + background color to 1 of the color codes
-                    // change visibility of 1st line
-
-                    // TODO On every onDown after that,
-                    // change background color + visibility of next line
-
-                    // TODO after last line, restore initial state : title blue, background white, verses hidden
 
                     return true;
                 }
