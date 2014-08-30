@@ -8,7 +8,7 @@
     <style name="AppTheme.TitleFont">
         <item name="android:textColor">@android:color/holo_blue_dark</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:layout_marginTop">64dp</item>
         <item name="android:layout_marginBottom">64dp</item>

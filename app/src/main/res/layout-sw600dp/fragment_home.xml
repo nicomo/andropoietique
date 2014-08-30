@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity$HomeFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/holo_blue_dark"
+        android:paddingTop="64dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="32dp"
+        android:paddingLeft="32dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/author"
+            android:textColor="@android:color/white"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="64dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/app_name"
+            android:textSize="52sp"
+            android:textStyle="bold|italic"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:text="@string/app_intro"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            android:typeface="serif"/>
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/listview_poems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+</LinearLayout>
