@@ -59,4 +59,5 @@ public class ChairCentreActivity extends Activity {
             return rootView;
         }
     }
+
 }

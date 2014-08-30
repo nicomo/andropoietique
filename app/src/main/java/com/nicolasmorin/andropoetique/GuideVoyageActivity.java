@@ -140,6 +140,7 @@ public class GuideVoyageActivity extends Activity {
                                 gvScrollView.smoothScrollTo(0, verse2.getTop());
                             }
                         });
+
                     } else if (verse5.getVisibility() == View.INVISIBLE) {
                         myLayout.setBackgroundColor(getResources().getColor(R.color.blue_1));
                         verse1.setBackgroundColor(getResources().getColor(R.color.blue_2));

@@ -26,14 +26,13 @@ public class ChairCentreNotificationReceiver extends BroadcastReceiver {
 
     // Notification Text Elements
     private final CharSequence tickerText = "Livraison d'un poème";
-    private final CharSequence contentTitle = "Tout est chair en mon propre centre";
-    private final CharSequence contentText = "J'ai rêvé que j'étais de leur peuple...";
+    private final CharSequence contentTitle = "Andropoïétique";
+    private final CharSequence contentText = "Tout est chair en mon propre sens";
 
     // get sharedpref ChairCentreNotif
     private SharedPreferences prefs;
     private Boolean chairCentreNotif;
-
-
+    // TODO unregister the Receiver after first use (in activity's onPause()) rather than manage through a sharedpref
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -43,7 +42,7 @@ public class ChairCentreNotificationReceiver extends BroadcastReceiver {
         prefs = PreferenceManager.getDefaultSharedPreferences(context);
         chairCentreNotif = prefs.getBoolean("chairCentreNotif", true);
 
-        if (chairCentreNotif) {
+        if (chairCentreNotif == true) {
 
             // create intent
             mNotificationIntent = new Intent(context, ChairCentreActivity.class);
@@ -68,7 +67,7 @@ public class ChairCentreNotificationReceiver extends BroadcastReceiver {
             chairCentreNotif = false;
             SharedPreferences.Editor editorPref = prefs.edit();
             editorPref.putBoolean("chairCentreNotif", chairCentreNotif);
-            editorPref.commit();
+            editorPref.apply();
 
         }
     }
