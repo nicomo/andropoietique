@@ -91,6 +91,8 @@ public class HomeFragment extends Fragment {
                         intent.setClass(getActivity(), ChairCentreActivity.class);
                     }
                     break;
+                case 3:
+                    intent.setClass(getActivity(),TheatreActivity.class);
             }
             startActivity(intent);
             }

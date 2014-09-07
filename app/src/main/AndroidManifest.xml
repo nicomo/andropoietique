@@ -29,15 +29,6 @@
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
         </activity>
         <activity
-            android:name=".ChevalGuerreActivity"
-            android:label="@string/title_activity_cheval_guerre"
-            android:parentActivityName=".HomeActivity"
-            android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.nicolasmorin.andropoetique.HomeActivity" />
-        </activity>
-        <activity
             android:name=".ChairCentreAlarm"
             android:label="@string/chair_centre_alarmtxt"
             android:parentActivityName=".HomeActivity"
@@ -71,7 +62,14 @@
             </intent-filter>
         </receiver>
 
-
+        <activity
+            android:name=".TheatreActivity"
+            android:label="@string/title_activity_theatre"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicolasmorin.andropoetique.HomeActivity" />
+        </activity>
     </application>
 
 </manifest>
