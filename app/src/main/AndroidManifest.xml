@@ -65,7 +65,8 @@
         <activity
             android:name=".TheatreActivity"
             android:label="@string/title_activity_theatre"
-            android:parentActivityName=".HomeActivity" >
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
