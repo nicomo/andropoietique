@@ -12,7 +12,7 @@ import android.view.MenuItem;
 
 public class TheatreActivity extends FragmentActivity {
 
-    static final int ITEMS = 2;
+    static final int ITEMS = 28; // number of verses, see TheatreFragment.java String [] theatreVerses
     MyAdapter mAdapter;
     ViewPager mPager;
 
@@ -39,14 +39,7 @@ public class TheatreActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position) {
-                case 0: // Fragment # 0 - This will show image
-                    return TheatreFragment.init(position);
-                case 1: // Fragment # 1 - This will show image
-                    return TheatreFragment.init(position);
-                default:// Fragment # 2-9 - Will show list
-                    return null;
-            }
+            return TheatreFragment.init(position);
         }
 
     }
