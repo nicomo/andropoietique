@@ -12,7 +12,7 @@ import android.view.MenuItem;
 
 public class TheatreActivity extends FragmentActivity {
 
-    static final int ITEMS = 28; // number of verses, see TheatreFragment.java String [] theatreVerses
+    static final int ITEMS = 15; // number of verses, see TheatreFragment.java String [] theatreVerses
     MyAdapter mAdapter;
     ViewPager mPager;
 

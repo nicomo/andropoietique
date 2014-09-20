@@ -39,64 +39,60 @@ public class TheatreFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View layoutView = inflater.inflate(R.layout.fragment_theatre, container, false);
 
-        // set both top and bottom images dynamically for each fragment in the pager
-        View img_top = layoutView.findViewById(R.id.theatre_img_top);
-        View img_bottom = layoutView.findViewById(R.id.theatre_img_bottom);
+        // set image dynamically for each fragment in the pager
+        View img = layoutView.findViewById(R.id.theatre_img);
 
-        int img_top_id = getResources().getIdentifier("theatre_img_top_" + mNum, "drawable", "com.nicolasmorin.andropoetique");
-        int img_bottom_id = getResources().getIdentifier("theatre_img_bottom_" + mNum, "drawable", "com.nicolasmorin.andropoetique");
-        Log.v(TAG, "img_top_id is " + img_top_id);
-        Log.v(TAG, "img_bottom_id is " + img_bottom_id);
+        int img_id = getResources().getIdentifier("theatre_img_" + mNum, "drawable", "com.nicolasmorin.andropoetique");
+        Log.v(TAG, "img_id is " + img_id);
 
-        ((ImageView) img_top).setImageResource(img_top_id);
-        ((ImageView) img_bottom).setImageResource(img_bottom_id);
+        ((ImageView) img).setImageResource(img_id);
 
         // setText from array of strings for each verse
         View tv = layoutView.findViewById(R.id.theatre_text);
 
         String [] theatreVerses = {
-                "La guerre est un cheval",
+                "la guerre est un cheval",
                 "dire deux fois la guerre\n" +
                         "cheval cloué au tronc de l’homme",
-                "La guerre est un cheval",
+                "la guerre est un cheval",
                 "un tronc cloué à la mer\n" +
-                        "du monde enveloppé de fibres",
-                "l’aigle du monde plane chaque jour",
+                        "du monde enveloppé de fibres\n\n" +
+                        "l’aigle du monde plane chaque jour",
                 "sur la hideur des animaux\n" +
-                        "deux fois dénombrés, un homme, un tronc",
-                "l’aigle du monde est un cheval coupant",
-                "qui renverse l’homme\n" +
-                        "par dessus les répétitions",
-                "un homme, un tronc, son contenu",
-                "à l’arbre du monde pendu\n" +
+                        "deux fois dénombrés, un homme, un tronc\n" +
+                        "l’aigle du monde est un cheval coupant\n" +
+                        "qui renverse l’homme",
+                "par dessus les répétitions\n" +
+                        "un homme, un tronc, son contenu\n" +
+                        "à l’arbre du monde pendu\n" +
                         "arbre du monde répété poétique",
-                "qui s’aligne devant lui-même",
-                "au sommet de la guerre pendu\n" +
-                        "avec ses étages ses degrés",
-                "l’oubli n’est pas une image mais une barque",
+                "qui s’aligne devant lui-même\n" +
+                        "au sommet de la guerre pendu\n" +
+                        "avec ses étages ses degrés\n\n" +
+                        "l’oubli n’est pas une image mais une barque",
                 "où montent les nations\n" +
-                        "dont chutent les chevaux",
-                "ils broutent cinq siècles dans la mer",
-                "où se déforment troncs et hommes\n" +
-                        "qu’une guerre porte à eux-mêmes",
-                "ils mangent la mort cinq fois cet hiver",
-                "avec des fusillades comme des bouquets\n" +
+                        "dont chutent les chevaux\n\n" +
+                        "ils broutent cinq siècles dans la mer\n" +
+                        "où se déforment troncs et hommes",
+                "qu’une guerre porte à eux-mêmes\n\n" +
+                        "ils mangent la mort cinq fois cet hiver\n" +
+                        "avec des fusillades comme des bouquets\n" +
                         "portés à la boutonnière",
-                "la mort est un cheval mécanique",
-                "comme une pantoufle qu’on enfile\n" +
-                        "d’entrailles et de sang doublée",
-                "regarde, regarde la forme",
-                "de l’homme, de l’homme et de l’homme\n" +
+                "la mort est un cheval mécanique\n" +
+                        "comme une pantoufle qu’on enfile",
+                "d’entrailles et de sang doublée",
+                "regarde, regarde la forme\n" +
+                        "de l’homme, de l’homme et de l’homme\n" +
                         "dans ses vêtements de jour",
-                "regarde le cheval de chaque jour",
-                "fondre sur l’épée comme la main\n" +
-                        "au travers de sa classe",
-                "la guerre est un tronc",
+                "regarde le cheval de chaque jour\n" +
+                        "fondre sur l’épée comme la main\n " +
+                        "au travers de sa classe\n\n" +
+                        "la guerre est un tronc",
                 "au travers des fleuves passé\n" +
-                        "pour que les hommes flottent",
-                "leur exaltante paresse",
-                "en dépit de toute certitude\n" +
-                        "la guerre est un animal de mes mains."
+                        "pour que les hommes flottent\n" +
+                        "leur exaltante paresse\n" +
+                        "en dépit de toute certitude",
+                "la guerre est un animal de mes mains."
         };
 
         ((TextView) tv).setText(theatreVerses[mNum]);
