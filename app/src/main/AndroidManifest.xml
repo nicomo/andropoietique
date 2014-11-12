@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nicolasmorin.andropoetique"
     android:versionCode="1"
-    android:versionName="beta">
+    android:versionName="beta" >
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".HomeActivity"
+            android:name="com.nicolasmorin.andropoetique.HomeActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -22,56 +22,60 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StatueActivity"
+            android:name="com.nicolasmorin.andropoetique.StatueActivity"
             android:label="@string/title_activity_statue"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="com.nicolasmorin.andropoetique.HomeActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
         </activity>
         <activity
-            android:name=".ChairCentreAlarm"
+            android:name="com.nicolasmorin.andropoetique.ChairCentreAlarm"
             android:label="@string/chair_centre_alarmtxt"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="com.nicolasmorin.andropoetique.HomeActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
         </activity>
         <activity
-            android:name=".ChairCentreActivity"
+            android:name="com.nicolasmorin.andropoetique.ChairCentreActivity"
             android:label="@string/title_activity_chair_centre"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="com.nicolasmorin.andropoetique.HomeActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
         </activity>
         <activity
-            android:name=".GuideVoyageActivity"
+            android:name="com.nicolasmorin.andropoetique.GuideVoyageActivity"
             android:label="@string/title_activity_guide_voyage"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="com.nicolasmorin.andropoetique.HomeActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
         </activity>
 
-        <receiver android:name=".ChairCentreNotificationReceiver" >
+        <receiver android:name="com.nicolasmorin.andropoetique.ChairCentreNotificationReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
         <activity
-            android:name=".TheatreActivity"
+            android:name="com.nicolasmorin.andropoetique.TheatreActivity"
             android:label="@string/title_activity_theatre"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="com.nicolasmorin.andropoetique.HomeActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
+        </activity>
+        <activity
+            android:name="com.nicolasmorin.andropoetique.DufferActivity"
+            android:label="@string/title_activity_duffer" >
         </activity>
     </application>
 

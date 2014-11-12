@@ -35,5 +35,6 @@
     <string name="guide_voyage_7">Ce rêve-ci est une marqueterie achevée,</string>
     <string name="guide_voyage_8">Une toile dans la fraîcheur muséographique du soir.</string>
     <string name="title_activity_theatre">Théâtre des cruautés</string>
+    <string name="title_activity_duffer">DufferActivity</string>
 
 </resources>
