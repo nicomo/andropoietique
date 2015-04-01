@@ -93,6 +93,16 @@ public class HomeFragment extends Fragment {
                     break;
                 case 3:
                     intent.setClass(getActivity(),TheatreActivity.class);
+                    break;
+                case 4:
+                    intent.setClass(getActivity(),AvrilActivity.class);
+                    break;
+                case 5:
+                    intent.setClass(getActivity(),MentonActivity.class);
+                    break;
+                case 6:
+                    intent.setClass(getActivity(),LisboaActivity.class);
+                    break;
             }
             startActivity(intent);
             }

@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nicolasmorin.andropoetique"
-    android:versionCode="1"
-    android:versionName="beta" >
+    android:versionCode="3"
+    android:versionName="3.0" >
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
-            android:name="com.nicolasmorin.andropoetique.HomeActivity"
+            android:name=".HomeActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -22,60 +27,80 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.nicolasmorin.andropoetique.StatueActivity"
+            android:name=".StatueActivity"
             android:label="@string/title_activity_statue"
-            android:parentActivityName="com.nicolasmorin.andropoetique.HomeActivity"
+            android:parentActivityName=".HomeActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
         </activity>
         <activity
-            android:name="com.nicolasmorin.andropoetique.ChairCentreAlarm"
+            android:name=".ChairCentreAlarm"
             android:label="@string/chair_centre_alarmtxt"
-            android:parentActivityName="com.nicolasmorin.andropoetique.HomeActivity"
+            android:parentActivityName=".HomeActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
         </activity>
         <activity
-            android:name="com.nicolasmorin.andropoetique.ChairCentreActivity"
+            android:name=".ChairCentreActivity"
             android:label="@string/title_activity_chair_centre"
-            android:parentActivityName="com.nicolasmorin.andropoetique.HomeActivity"
+            android:parentActivityName=".HomeActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
         </activity>
         <activity
-            android:name="com.nicolasmorin.andropoetique.GuideVoyageActivity"
+            android:name=".GuideVoyageActivity"
             android:label="@string/title_activity_guide_voyage"
-            android:parentActivityName="com.nicolasmorin.andropoetique.HomeActivity"
+            android:parentActivityName=".HomeActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
         </activity>
 
-        <receiver android:name="com.nicolasmorin.andropoetique.ChairCentreNotificationReceiver" >
+        <receiver android:name=".ChairCentreNotificationReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
         <activity
-            android:name="com.nicolasmorin.andropoetique.TheatreActivity"
+            android:name=".TheatreActivity"
             android:label="@string/title_activity_theatre"
-            android:parentActivityName="com.nicolasmorin.andropoetique.HomeActivity"
+            android:parentActivityName=".HomeActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nicolasmorin.andropoetique.HomeActivity" />
         </activity>
         <activity
-            android:name="com.nicolasmorin.andropoetique.DufferActivity"
-            android:label="@string/title_activity_duffer" >
+            android:name=".AvrilActivity"
+            android:label="@string/title_activity_avril"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicolasmorin.andropoetique.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".MentonActivity"
+            android:label="@string/title_activity_menton"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicolasmorin.andropoetique.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".LisboaActivity"
+            android:label="@string/title_activity_lisboa"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nicolasmorin.andropoetique.HomeActivity" />
         </activity>
     </application>
 

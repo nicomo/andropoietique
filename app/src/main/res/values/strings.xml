@@ -12,6 +12,9 @@
         <item>Guide de voyage</item>
         <item>Tout est chair en mon propre centre</item>
         <item>Théâtre des cruautés</item>
+        <item>Avril</item>
+        <item>Menton sur la poitrine</item>
+        <item>Lisboa azul</item>
     </string-array>
 
     <string name="title_activity_statue">Statue</string>
@@ -35,6 +38,22 @@
     <string name="guide_voyage_7">Ce rêve-ci est une marqueterie achevée,</string>
     <string name="guide_voyage_8">Une toile dans la fraîcheur muséographique du soir.</string>
     <string name="title_activity_theatre">Théâtre des cruautés</string>
-    <string name="title_activity_duffer">DufferActivity</string>
-
+    <string name="title_activity_avril">Avril</string>
+    <string name="avril_text">Blanc-mauve du ciel sur les murs\nDe bleu frais où bruit\nL’ombre sonore des feuilles</string>
+    <string name="title_activity_menton">Menton sur la poitrine</string>
+    <string name="menton_add_item">verser</string>
+    <string name="menton_remove_item">renverser</string>
+    <string name="title_activity_lisboa">Lisboa azul</string>
+    <string name="lisboa_1">Lisbonne bleue calme trajectoire de flèche atlantique</string>
+    <string name="lisboa_2">Où mur chaud ourlé de palmes et de pierre attend.</string>
+    <string name="lisboa_3">Hors les films aux champs goudronnés,</string>
+    <string name="lisboa_4">Hors les barbelés de lumière</string>
+    <string name="lisboa_5">Oubliés des guerres pacifiques,</string>
+    <string name="lisboa_6">Les taxis crèmes étirent leurs confortables étoiles.</string>
+    <string name="lisboa_7">Lisbonne notre mer se récite au vent :</string>
+    <string name="lisboa_8">Sur nappe blanche d’oursins de poulpes et de pains détachés</string>
+    <string name="lisboa_9">D’un Grand Tour. Aussi : dans un verre</string>
+    <string name="lisboa_10">A moutarde, café chargé de</string>
+    <string name="lisboa_11">Lait, de cannelle, debout. Cantines</string>
+    <string name="lisboa_12">Cachées au fond de boutiques sans presque de façade.</string>
 </resources>
