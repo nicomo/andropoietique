@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.nicolasmorin.andropoetique.MentonActivity">
+    <!-- Adds an item to the list. -->
+    <item android:id="@+id/menton_add_item"
+        android:title="@string/menton_add_item"
+        android:icon="@drawable/ic_action_new"
+        android:showAsAction="ifRoom" />
+
+</menu>
